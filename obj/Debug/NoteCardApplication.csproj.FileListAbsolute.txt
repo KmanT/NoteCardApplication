@@ -1,0 +1,11 @@
+C:\Users\Kyle\Source\Repos\NoteCardApplication\NoteCardApplication\bin\Debug\NoteCardApplication.exe.config
+C:\Users\Kyle\Source\Repos\NoteCardApplication\NoteCardApplication\bin\Debug\NoteCardApplication.exe
+C:\Users\Kyle\Source\Repos\NoteCardApplication\NoteCardApplication\bin\Debug\NoteCardApplication.pdb
+C:\Users\Kyle\Source\Repos\NoteCardApplication\NoteCardApplication\obj\Debug\NoteCardApplication.csprojAssemblyReference.cache
+C:\Users\Kyle\Source\Repos\NoteCardApplication\NoteCardApplication\obj\Debug\NoteCardApplication.Main.resources
+C:\Users\Kyle\Source\Repos\NoteCardApplication\NoteCardApplication\obj\Debug\NoteCardApplication.Properties.Resources.resources
+C:\Users\Kyle\Source\Repos\NoteCardApplication\NoteCardApplication\obj\Debug\NoteCardApplication.csproj.GenerateResource.cache
+C:\Users\Kyle\Source\Repos\NoteCardApplication\NoteCardApplication\obj\Debug\NoteCardApplication.csproj.CoreCompileInputs.cache
+C:\Users\Kyle\Source\Repos\NoteCardApplication\NoteCardApplication\obj\Debug\NoteCardApplication.exe
+C:\Users\Kyle\Source\Repos\NoteCardApplication\NoteCardApplication\obj\Debug\NoteCardApplication.pdb
+C:\Users\Kyle\Source\Repos\NoteCardApplication\NoteCardApplication\obj\Debug\NoteCardApplication.NewCardForm.resources
