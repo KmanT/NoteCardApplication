@@ -10,7 +10,7 @@ namespace NoteCardApplication
     class CardWriter
     {
         public const string CARD_COL_FILEPATH = "C:\\Users\\Kyle\\Source\\Repos\\" +
-            "NoteCardApplication\\NoteCardApplication\\CardCollections";
+            "NoteCardApplication\\NoteCardApplication\\CardCollections\\";
 
         private string collectionName;
         private LinkedList<Card> cardList;
@@ -71,16 +71,13 @@ namespace NoteCardApplication
             fileName = createFileName(fileName);
             System.IO.StreamWriter streamWriter = new System.IO.StreamWriter(fileName);
 
-            /*for (int i = 0; i <= cardList.Count; i++)
+            for (int i = 0; i < cardList.Count; i++)
             {
                 writeCard(streamWriter, i);
-            }*/
-
-            foreach (Card card in cardList)
-            {
-                writeCard(streamWriter);
             }
+            
             streamWriter.Close();
+            
         }
 
     }
