@@ -39,7 +39,6 @@
             this.btnCreate = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
-            this.lblColSelected = new System.Windows.Forms.Label();
             this.grpNewCard.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,7 +60,6 @@
             // 
             // grpNewCard
             // 
-            this.grpNewCard.Controls.Add(this.lblColSelected);
             this.grpNewCard.Controls.Add(this.btnClear);
             this.grpNewCard.Controls.Add(this.btnCreate);
             this.grpNewCard.Controls.Add(this.rtxtBack);
@@ -146,15 +144,7 @@
             this.btnClear.TabIndex = 6;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
-            // 
-            // lblColSelected
-            // 
-            this.lblColSelected.AutoSize = true;
-            this.lblColSelected.Location = new System.Drawing.Point(10, 19);
-            this.lblColSelected.Name = "lblColSelected";
-            this.lblColSelected.Size = new System.Drawing.Size(46, 17);
-            this.lblColSelected.TabIndex = 7;
-            this.lblColSelected.Text = "label4";
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // NewCardForm
             // 
@@ -188,6 +178,5 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtFront;
         private System.Windows.Forms.Button btnCreateCollection;
-        private System.Windows.Forms.Label lblColSelected;
     }
 }

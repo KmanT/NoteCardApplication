@@ -30,12 +30,23 @@ namespace NoteCardApplication
 
         private void btnCreateCollection_Click(object sender, EventArgs e)
         {
-            cardWriter.writeCollection(txtCollectionName.Text);
+            if (Validator.isEmpty(txtCollectionName.Name, txtCollectionName.Text) == false)
+            {
+                cardWriter.writeCollection(txtCollectionName.Text);
+            }            
         }
 
         private void btnCreate_Click(object sender, EventArgs e)
         {
             cardWriter.addCard(new Card(txtFront.Text, rtxtBack.Text));
+            txtFront.Clear();
+            rtxtBack.Clear();
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            txtFront.Clear();
+            rtxtBack.Clear();
         }
     }
 }
