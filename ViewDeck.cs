@@ -10,27 +10,20 @@ using System.Windows.Forms;
 
 namespace NoteCardApplication
 {
-    public partial class Main : Form
+    public partial class ViewDeck : Form
     {
-        public Main()
+        public ViewDeck()
         {
             InitializeComponent();
         }
 
-        private void btnExit_Click(object sender, EventArgs e)
+        public ViewDeck(string[] deck)
         {
-            Application.Exit();
+            InitializeComponent();
+
         }
 
-        private void btnNewCards_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            NewCardForm frmNewCard = new NewCardForm();
-            frmNewCard.ShowDialog();
-            this.Close();
-        }
-
-        private void btnViewCards_Click(object sender, EventArgs e)
+        private void btnBack_Click(object sender, EventArgs e)
         {
             this.Hide();
             SelectDeckForm sd = new SelectDeckForm();

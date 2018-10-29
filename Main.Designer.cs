@@ -32,11 +32,14 @@
             this.lblWelcome = new System.Windows.Forms.Label();
             this.btnViewCards = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnNewCards
             // 
-            this.btnNewCards.Location = new System.Drawing.Point(176, 47);
+            this.btnNewCards.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnNewCards.Location = new System.Drawing.Point(160, 62);
             this.btnNewCards.Name = "btnNewCards";
             this.btnNewCards.Size = new System.Drawing.Size(142, 23);
             this.btnNewCards.TabIndex = 0;
@@ -46,9 +49,10 @@
             // 
             // lblWelcome
             // 
+            this.lblWelcome.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblWelcome.AutoSize = true;
             this.lblWelcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWelcome.Location = new System.Drawing.Point(42, 9);
+            this.lblWelcome.Location = new System.Drawing.Point(17, 10);
             this.lblWelcome.Name = "lblWelcome";
             this.lblWelcome.Size = new System.Drawing.Size(438, 31);
             this.lblWelcome.TabIndex = 1;
@@ -56,16 +60,19 @@
             // 
             // btnViewCards
             // 
-            this.btnViewCards.Location = new System.Drawing.Point(176, 76);
+            this.btnViewCards.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnViewCards.Location = new System.Drawing.Point(160, 91);
             this.btnViewCards.Name = "btnViewCards";
             this.btnViewCards.Size = new System.Drawing.Size(142, 23);
             this.btnViewCards.TabIndex = 2;
             this.btnViewCards.Text = "View Cards";
             this.btnViewCards.UseVisualStyleBackColor = true;
+            this.btnViewCards.Click += new System.EventHandler(this.btnViewCards_Click);
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(176, 105);
+            this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExit.Location = new System.Drawing.Point(160, 120);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(142, 23);
             this.btnExit.TabIndex = 3;
@@ -73,19 +80,30 @@
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.lblWelcome);
+            this.panel1.Controls.Add(this.btnExit);
+            this.panel1.Controls.Add(this.btnNewCards);
+            this.panel1.Controls.Add(this.btnViewCards);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(515, 292);
+            this.panel1.TabIndex = 4;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(542, 177);
-            this.Controls.Add(this.btnExit);
-            this.Controls.Add(this.btnViewCards);
-            this.Controls.Add(this.lblWelcome);
-            this.Controls.Add(this.btnNewCards);
+            this.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.ClientSize = new System.Drawing.Size(515, 292);
+            this.Controls.Add(this.panel1);
             this.Name = "Main";
             this.Text = "Note Card Creator";
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -95,6 +113,7 @@
         private System.Windows.Forms.Label lblWelcome;
         private System.Windows.Forms.Button btnViewCards;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 

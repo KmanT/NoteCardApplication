@@ -9,3 +9,5 @@ C:\Users\Kyle\Source\Repos\NoteCardApplication\NoteCardApplication\obj\Debug\Not
 C:\Users\Kyle\Source\Repos\NoteCardApplication\NoteCardApplication\obj\Debug\NoteCardApplication.exe
 C:\Users\Kyle\Source\Repos\NoteCardApplication\NoteCardApplication\obj\Debug\NoteCardApplication.pdb
 C:\Users\Kyle\Source\Repos\NoteCardApplication\NoteCardApplication\obj\Debug\NoteCardApplication.NewCardForm.resources
+C:\Users\Kyle\Source\Repos\NoteCardApplication\NoteCardApplication\obj\Debug\NoteCardApplication.SelectDeckForm.resources
+C:\Users\Kyle\Source\Repos\NoteCardApplication\NoteCardApplication\obj\Debug\NoteCardApplication.ViewDeck.resources

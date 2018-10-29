@@ -4,13 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace NoteCardApplication
 {
     class CardWriter
     {
         public const string CARD_COL_FILEPATH = "C:\\Users\\Kyle\\Source\\Repos\\" +
-            "NoteCardApplication\\NoteCardApplication\\CardCollections\\";
+            "NoteCardApplication\\NoteCardApplication\\CardCollections";
 
         private string collectionName;
         private LinkedList<Card> cardList;
@@ -37,10 +38,12 @@ namespace NoteCardApplication
             return cardList.ElementAt<Card>(index);
         }
 
-        public string createFileName(string fileName)
+        public string createNewFileName(string fileName)
         {
-            return CARD_COL_FILEPATH + fileName + ".txt";
+            return CARD_COL_FILEPATH + "\\" + fileName + ".txt";
         }
+
+
 
         public void writeCard(System.IO.StreamWriter streamWriter, int index)
         {
@@ -62,23 +65,28 @@ namespace NoteCardApplication
             {
                 MessageBox.Show("That element in the list doesn't exist", "Null Reference " +
                     "exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            
+            }            
         }
 
         public void writeCollection(string fileName)
         {
-            fileName = createFileName(fileName);
-            System.IO.StreamWriter streamWriter = new System.IO.StreamWriter(fileName);
-
-            for (int i = 0; i < cardList.Count; i++)
+            fileName = createNewFileName(fileName);
+            using (FileStream fileStream = new FileStream(fileName, FileMode.Append, FileAccess.Write))
             {
-                writeCard(streamWriter, i);
-            }
-            
-            streamWriter.Close();
-            
+                using (StreamWriter streamWriter = new StreamWriter(fileStream))
+                {
+                    for (int i = 0; i < cardList.Count; i++)
+                    {
+                        writeCard(streamWriter, i);
+                    }
+                    streamWriter.Close();
+                }
+            }            
         }
 
+        public void readCollection(string fileName)
+        {
+            fileName = 
+        }
     }
 }
