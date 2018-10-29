@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.txtCollectionName = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblColName = new System.Windows.Forms.Label();
+            this.grpNewCard = new System.Windows.Forms.GroupBox();
             this.btnCreateCollection = new System.Windows.Forms.Button();
             this.txtFront = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -39,7 +39,8 @@
             this.btnCreate = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
-            this.groupBox1.SuspendLayout();
+            this.lblColSelected = new System.Windows.Forms.Label();
+            this.grpNewCard.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtCollectionName
@@ -49,43 +50,44 @@
             this.txtCollectionName.Size = new System.Drawing.Size(163, 22);
             this.txtCollectionName.TabIndex = 0;
             // 
-            // label1
+            // lblColName
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 17);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(110, 17);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Collection Name";
+            this.lblColName.AutoSize = true;
+            this.lblColName.Location = new System.Drawing.Point(13, 17);
+            this.lblColName.Name = "lblColName";
+            this.lblColName.Size = new System.Drawing.Size(110, 17);
+            this.lblColName.TabIndex = 1;
+            this.lblColName.Text = "Collection Name";
             // 
-            // groupBox1
+            // grpNewCard
             // 
-            this.groupBox1.Controls.Add(this.btnClear);
-            this.groupBox1.Controls.Add(this.btnBack);
-            this.groupBox1.Controls.Add(this.btnCreate);
-            this.groupBox1.Controls.Add(this.rtxtBack);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.txtFront);
-            this.groupBox1.Location = new System.Drawing.Point(16, 50);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(440, 230);
-            this.groupBox1.TabIndex = 2;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "New Card";
+            this.grpNewCard.Controls.Add(this.lblColSelected);
+            this.grpNewCard.Controls.Add(this.btnClear);
+            this.grpNewCard.Controls.Add(this.btnCreate);
+            this.grpNewCard.Controls.Add(this.rtxtBack);
+            this.grpNewCard.Controls.Add(this.label3);
+            this.grpNewCard.Controls.Add(this.label2);
+            this.grpNewCard.Controls.Add(this.txtFront);
+            this.grpNewCard.Location = new System.Drawing.Point(16, 50);
+            this.grpNewCard.Name = "grpNewCard";
+            this.grpNewCard.Size = new System.Drawing.Size(440, 256);
+            this.grpNewCard.TabIndex = 2;
+            this.grpNewCard.TabStop = false;
+            this.grpNewCard.Text = "New Card";
             // 
             // btnCreateCollection
             // 
-            this.btnCreateCollection.Location = new System.Drawing.Point(308, 12);
+            this.btnCreateCollection.Location = new System.Drawing.Point(12, 324);
             this.btnCreateCollection.Name = "btnCreateCollection";
             this.btnCreateCollection.Size = new System.Drawing.Size(148, 23);
             this.btnCreateCollection.TabIndex = 3;
             this.btnCreateCollection.Text = "Create Collection";
             this.btnCreateCollection.UseVisualStyleBackColor = true;
+            this.btnCreateCollection.Click += new System.EventHandler(this.btnCreateCollection_Click);
             // 
             // txtFront
             // 
-            this.txtFront.Location = new System.Drawing.Point(113, 21);
+            this.txtFront.Location = new System.Drawing.Point(113, 47);
             this.txtFront.Name = "txtFront";
             this.txtFront.Size = new System.Drawing.Size(100, 22);
             this.txtFront.TabIndex = 0;
@@ -93,7 +95,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 24);
+            this.label2.Location = new System.Drawing.Point(7, 50);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(72, 17);
             this.label2.TabIndex = 1;
@@ -102,7 +104,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(7, 65);
+            this.label3.Location = new System.Drawing.Point(7, 89);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(70, 17);
             this.label3.TabIndex = 2;
@@ -110,24 +112,25 @@
             // 
             // rtxtBack
             // 
-            this.rtxtBack.Location = new System.Drawing.Point(113, 65);
+            this.rtxtBack.Location = new System.Drawing.Point(113, 89);
             this.rtxtBack.Name = "rtxtBack";
-            this.rtxtBack.Size = new System.Drawing.Size(321, 96);
+            this.rtxtBack.Size = new System.Drawing.Size(321, 115);
             this.rtxtBack.TabIndex = 3;
             this.rtxtBack.Text = "";
             // 
             // btnCreate
             // 
-            this.btnCreate.Location = new System.Drawing.Point(9, 186);
+            this.btnCreate.Location = new System.Drawing.Point(6, 227);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(119, 23);
             this.btnCreate.TabIndex = 4;
             this.btnCreate.Text = "Create Card";
             this.btnCreate.UseVisualStyleBackColor = true;
+            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(359, 186);
+            this.btnBack.Location = new System.Drawing.Point(385, 324);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(75, 23);
             this.btnBack.TabIndex = 5;
@@ -137,26 +140,36 @@
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(201, 186);
+            this.btnClear.Location = new System.Drawing.Point(359, 227);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(75, 23);
             this.btnClear.TabIndex = 6;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
             // 
+            // lblColSelected
+            // 
+            this.lblColSelected.AutoSize = true;
+            this.lblColSelected.Location = new System.Drawing.Point(10, 19);
+            this.lblColSelected.Name = "lblColSelected";
+            this.lblColSelected.Size = new System.Drawing.Size(46, 17);
+            this.lblColSelected.TabIndex = 7;
+            this.lblColSelected.Text = "label4";
+            // 
             // NewCardForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(471, 291);
+            this.ClientSize = new System.Drawing.Size(472, 359);
             this.Controls.Add(this.btnCreateCollection);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.grpNewCard);
+            this.Controls.Add(this.btnBack);
+            this.Controls.Add(this.lblColName);
             this.Controls.Add(this.txtCollectionName);
             this.Name = "NewCardForm";
             this.Text = "Create Cards";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.grpNewCard.ResumeLayout(false);
+            this.grpNewCard.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -165,8 +178,8 @@
         #endregion
 
         private System.Windows.Forms.TextBox txtCollectionName;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label lblColName;
+        private System.Windows.Forms.GroupBox grpNewCard;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button btnCreate;
@@ -175,5 +188,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtFront;
         private System.Windows.Forms.Button btnCreateCollection;
+        private System.Windows.Forms.Label lblColSelected;
     }
 }

@@ -12,9 +12,12 @@ namespace NoteCardApplication
 {
     public partial class NewCardForm : Form
     {
+        private CardWriter cardWriter;
+
         public NewCardForm()
         {
             InitializeComponent();
+            cardWriter = new CardWriter();
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -23,6 +26,16 @@ namespace NoteCardApplication
             Main frmMain = new Main();
             frmMain.ShowDialog();
             this.Close();
+        }
+
+        private void btnCreateCollection_Click(object sender, EventArgs e)
+        {
+            cardWriter.writeCollection(txtCollectionName.Text);
+        }
+
+        private void btnCreate_Click(object sender, EventArgs e)
+        {
+            cardWriter.addCard(new Card(txtFront.Text, rtxtBack.Text));
         }
     }
 }

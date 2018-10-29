@@ -36,7 +36,7 @@
             // 
             // btnNewCards
             // 
-            this.btnNewCards.Location = new System.Drawing.Point(211, 43);
+            this.btnNewCards.Location = new System.Drawing.Point(176, 47);
             this.btnNewCards.Name = "btnNewCards";
             this.btnNewCards.Size = new System.Drawing.Size(142, 23);
             this.btnNewCards.TabIndex = 0;
@@ -48,7 +48,7 @@
             // 
             this.lblWelcome.AutoSize = true;
             this.lblWelcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWelcome.Location = new System.Drawing.Point(58, 9);
+            this.lblWelcome.Location = new System.Drawing.Point(42, 9);
             this.lblWelcome.Name = "lblWelcome";
             this.lblWelcome.Size = new System.Drawing.Size(438, 31);
             this.lblWelcome.TabIndex = 1;
@@ -56,7 +56,7 @@
             // 
             // btnViewCards
             // 
-            this.btnViewCards.Location = new System.Drawing.Point(211, 72);
+            this.btnViewCards.Location = new System.Drawing.Point(176, 76);
             this.btnViewCards.Name = "btnViewCards";
             this.btnViewCards.Size = new System.Drawing.Size(142, 23);
             this.btnViewCards.TabIndex = 2;
@@ -65,7 +65,7 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(211, 101);
+            this.btnExit.Location = new System.Drawing.Point(176, 105);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(142, 23);
             this.btnExit.TabIndex = 3;

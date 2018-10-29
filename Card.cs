@@ -8,27 +8,19 @@ namespace NoteCardApplication
 {
     class Card
     {
-        private int cardID;
         private string frontText;
         private string backText;
 
         public Card()
         {
-            cardID = 0;
             frontText = "";
             backText = "";
         }
 
-        public Card(int cardID)
+        public Card(string front, string back)
         {
-            this.cardID = cardID;
-            frontText = "";
-            backText = "";
-        }
-
-        public int getCardID()
-        {
-            return cardID;
+            this.frontText = front;
+            this.backText = back;
         }
 
         public void setFrontText(string text)
