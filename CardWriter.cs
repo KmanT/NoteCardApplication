@@ -43,29 +43,30 @@ namespace NoteCardApplication
             return CARD_COL_FILEPATH + "\\" + fileName + ".txt";
         }
 
-
-
         public void writeCard(System.IO.StreamWriter streamWriter, int index)
         {
             try
             {
                 string writeLine = cardList.ElementAt<Card>(index).getFrontText();
-                writeLine += "," + cardList.ElementAt<Card>(index).getBackText();
+                writeLine += "|" + cardList.ElementAt<Card>(index).getBackText();
 
                 streamWriter.WriteLine(writeLine);
-            } catch (IndexOutOfRangeException)
+            }
+            catch (IndexOutOfRangeException)
             {
                 MessageBox.Show("That element in the list doesn't exist", "Index out of range " +
                     "exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            } catch (ArgumentOutOfRangeException)
+            }
+            catch (ArgumentOutOfRangeException)
             {
                 MessageBox.Show("That element in the list doesn't exist", "Arguement out of range " +
                     "exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            } catch (NullReferenceException)
+            }
+            catch (NullReferenceException)
             {
                 MessageBox.Show("That element in the list doesn't exist", "Null Reference " +
                     "exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }            
+            }
         }
 
         public void writeCollection(string fileName)
@@ -81,12 +82,8 @@ namespace NoteCardApplication
                     }
                     streamWriter.Close();
                 }
-            }            
+            }
         }
 
-        public void readCollection(string fileName)
-        {
-            fileName = 
-        }
     }
 }

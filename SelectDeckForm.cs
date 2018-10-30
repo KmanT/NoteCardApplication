@@ -52,8 +52,12 @@ namespace NoteCardApplication
 
         private void btnViewDeck_Click(object sender, EventArgs e)
         {
+            string filePath = cmbDecks.GetItemText(cmbDecks.SelectedItem);
+
+
             this.Hide();
-            ViewDeck vd = new ViewDeck();
+
+            ViewDeck vd = new ViewDeck(filePath);
             vd.ShowDialog();
             this.Close();
         }

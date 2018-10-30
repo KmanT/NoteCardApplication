@@ -12,15 +12,26 @@ namespace NoteCardApplication
 {
     public partial class ViewDeck : Form
     {
+        private CardReader reader;
+
         public ViewDeck()
         {
             InitializeComponent();
+            reader = new CardReader();
+            
+            
         }
 
-        public ViewDeck(string[] deck)
+        public ViewDeck(string fileName)
         {
             InitializeComponent();
+            reader = new CardReader();
+            reader.readCollection(fileName);
 
+            foreach (Card card in reader.getCardList())
+            {
+                Console.WriteLine(card.getFrontText() + " " + card.getBackText());
+            }
         }
 
         private void btnBack_Click(object sender, EventArgs e)

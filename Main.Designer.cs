@@ -39,7 +39,7 @@
             // btnNewCards
             // 
             this.btnNewCards.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnNewCards.Location = new System.Drawing.Point(160, 62);
+            this.btnNewCards.Location = new System.Drawing.Point(172, 64);
             this.btnNewCards.Name = "btnNewCards";
             this.btnNewCards.Size = new System.Drawing.Size(142, 23);
             this.btnNewCards.TabIndex = 0;
@@ -61,7 +61,7 @@
             // btnViewCards
             // 
             this.btnViewCards.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnViewCards.Location = new System.Drawing.Point(160, 91);
+            this.btnViewCards.Location = new System.Drawing.Point(172, 93);
             this.btnViewCards.Name = "btnViewCards";
             this.btnViewCards.Size = new System.Drawing.Size(142, 23);
             this.btnViewCards.TabIndex = 2;
@@ -72,7 +72,7 @@
             // btnExit
             // 
             this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnExit.Location = new System.Drawing.Point(160, 120);
+            this.btnExit.Location = new System.Drawing.Point(172, 122);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(142, 23);
             this.btnExit.TabIndex = 3;
@@ -89,7 +89,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(515, 292);
+            this.panel1.Size = new System.Drawing.Size(515, 184);
             this.panel1.TabIndex = 4;
             // 
             // Main
@@ -97,7 +97,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.ClientSize = new System.Drawing.Size(515, 292);
+            this.ClientSize = new System.Drawing.Size(515, 184);
             this.Controls.Add(this.panel1);
             this.Name = "Main";
             this.Text = "Note Card Creator";
