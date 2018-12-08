@@ -33,6 +33,8 @@ namespace NoteCardApplication
             if (Validator.isEmpty(txtCollectionName.Name, txtCollectionName.Text) == false)
             {
                 cardWriter.writeCollection(txtCollectionName.Text);
+                MessageBox.Show("Deck created.", "You have created the deck: " + txtCollectionName.Text,
+                    MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }            
         }
 

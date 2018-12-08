@@ -36,31 +36,40 @@ namespace NoteCardApplication
             fileName = createExistingFileName(fileName);
             try
             {
-                using (FileStream fileStream = new FileStream(fileName, FileMode.Open, FileAccess.Read))
+                using (FileStream fileStream = new FileStream(fileName, FileMode.Open, FileAccess.Read ))
                 {
-                    using (StreamReader streamReader = new StreamReader(fileStream))
+                    using (StreamReader streamReader = new StreamReader(fileStream, System.Text.Encoding.UTF8))
                     {
                         string fileLine;
-                        while ((fileLine = streamReader.ReadLine()) != null)
-                        {
-                            fileLine = streamReader.ReadLine();
-                            
-                            string[] args = fileLine.Split('|');
+                        //string[] args = new string[2];
 
-                            cardList.AddLast(new Card(args[0], args[1]));
+                        try
+                        {
+                            while ((fileLine = streamReader.ReadLine()) != null)
+                            {
+                                
+                                string[] args = fileLine.Split('|');
+
+                                cardList.AddLast(new Card(args[0], args[1]));
+                            }
+                        } catch (NullReferenceException NRE)
+                        {
+                            MessageBox.Show("There was a null reference exception. " + NRE.ToString(), "Null Reference Exception",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
+                        
 
                         streamReader.Close();
                     }
                 }
 
             }
-            catch (DirectoryNotFoundException)
+            catch (DirectoryNotFoundException d)
             {
                 MessageBox.Show("Directory for '" + fileName + "' was not found.",
                     "Directory not found exception.", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            catch (FileNotFoundException)
+            catch (FileNotFoundException f)
             {
                 MessageBox.Show("File '" + fileName + "' does not exist.",
                     "File not found exception.", MessageBoxButtons.OK, MessageBoxIcon.Error);
